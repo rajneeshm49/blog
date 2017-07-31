@@ -1,0 +1,21 @@
+<div class="container container-div">
+	<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+		<div class="form-group row">
+			<label for="username" class="col-sm-2 col-lg-2 col xl-2 col-form-label">Username</label>
+			<div class="col-sm-10 col-lg-10 col-xl-10">
+				<input type="text" id="username" required [(ngModel)]="login.username1" name="username" #username="ngModel">
+				<div class="alert alert-danger noborder" [hidden]="username.valid || username.pristine">Username is required</div>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="password" class="col-sm-2 col-lg-2 col xl-2 col-form-label">Password</label>
+			<div class="col-sm-10 col-lg-10 col xl-10">
+				<input type="password" name="password" id="password" [(ngModel)]="login.password1" #password="ngModel" required>
+				<div class="alert alert-danger noborder" [hidden]="password.valid || password.pristine">Password is required</div>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Submit</button>
+	</form>
+</div>
