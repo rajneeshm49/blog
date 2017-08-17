@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 })
 
 export class LoginComponent {
-	login = {"username1": "", "password1": ""};
+	login = {"username": "", "password": ""};
 	private response;
 
 	constructor(private loginService: LoginService){}

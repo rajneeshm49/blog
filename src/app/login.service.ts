@@ -9,7 +9,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class LoginService {
 
-	private blogApiUrl = 'http://localhost/blog-api/blog-rest-api.php';
+	private blogApiUrl = 'http://localhost/ex/ex1.php';
 
 	constructor(private http: Http) {}
 
