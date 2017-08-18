@@ -8,11 +8,16 @@ import { LoginService } from './login.service';
 
 export class LoginComponent {
 	login = {"username": "", "password": ""};
-	private response;
+	private response: string[];
 
 	constructor(private loginService: LoginService){}
 	
 	onSubmit() {
-		this.response = this.loginService.passLoginDetails(this.login).subscribe(val => console.log(val));
+		this.loginService.passLoginDetails(this.login).subscribe(val => {
+      this.response = val;
+    },
+    err => {
+      console.log('Something went wrong!');
+    });
 	}
 }
