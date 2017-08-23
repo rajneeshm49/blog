@@ -17,6 +17,6 @@
 		</div>
 
 		<button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Submit</button>
-		<div *ngIf="response">{{response.msg}}</div>
+		<div *ngIf="errorMsg">{{errorMsg}}</div>
 	</form>
 </div>
