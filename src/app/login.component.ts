@@ -7,12 +7,14 @@ import { LoginService } from './login.service';
 })
 
 export class LoginComponent {
-	login = {"username1": "", "password1": ""};
+	login = {"username": "", "password": ""};
 	private response;
 
 	constructor(private loginService: LoginService){}
 	
 	onSubmit() {
+		console.log(this.login);
 		this.response = this.loginService.passLoginDetails(this.login).subscribe(val => console.log(val));
+		console.log(this.response);
 	}
 }
