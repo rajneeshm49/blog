@@ -9,8 +9,13 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class LoginService {
 
+<<<<<<< HEAD
 	private blogApiUrl = 'http://localhost/blog/blog-api/login';
 	
+=======
+	private blogApiUrl = 'http://localhost/ex/ex1.php';
+
+>>>>>>> 85c61aaa3cc5a58341fa2374612e8861d5a533af
 	constructor(private http: Http) {}
 
 	passLoginDetails(formData: Object):Observable<any[]> {
