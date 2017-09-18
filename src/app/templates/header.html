@@ -28,16 +28,11 @@
 	                     <li><a href="#">Submenu 03</a></li>
 	                  </ul>
 	                </li>	
-	                <li><a href="archives.html">Archives</a></li>
-			        <li class="has-children"><a href="single.html">Blog</a>
-							<ul>
-	                     <li><a href="blog.html">Blog Entries</a></li>
-	                     <li><a href="single.html">Single Blog</a></li>	                     
-	                  </ul>
-			      	</li>		      	
-			      	<li><a href="page.html">Page</a></li>
-			      	<li><a routerLink="/login">Login</a></li>
+	                <li routerLinkActive="current"><a routerLink="/create-blog">Create Blog</a></li>		      	
+			      	<li *ngIf="!sess"><a routerLink="/login">Login</a></li>
+			      	<li *ngIf="sess"><a routerLink="/logout">Logout</a></li>
 			   	</ul> <!-- end #nav -->			   	 
+			   	<span *ngIf="sess">Welcome {{sess.username}}</span>
 
 	   	</div> 
 
